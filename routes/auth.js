@@ -27,7 +27,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { password, firstName, lastName, emailId, gender } = req.body;
+  const { password, firstName, lastName, emailId, gender, phone } = req.body;
   try {
     //encrypting the password
     const hashPassword = await bcyrpt.hash(password, 10);
